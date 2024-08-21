@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+  body {
+  overflow-x: hidden;
+}
+
+/* Background images */
+.hero-image {
+  background-image: url("/hero-background.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Offset background image for mobile */
+@media screen and (max-width: 1023px) {
+  .hero-image {
+    background-position: 85% center;
+  }
+}
+
+.page-banner-image-1 {
+  background-image: url("/banner-map-background3.webp");
+  background-size: cover;
+  background-position: center bottom;
+  z-index: -1;
+}
+
+.page-banner-image-2 {
+  background-image: url("/banner-background.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.service-banner-image {
+  background-image: url("/banner-service-background.webp");
+  background-size: cover;
+  background-position: 95% center;
+  background-attachment: fixed;
+}
+
+/* Offset background image for mobile */
+@media screen and (max-width: 1023px) {
+  .service-banner-image {
+    background-position: 70% center;
+  }
+}
+
+.contact-banner-image {
+  background-image: url("/contact-banner.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Navbar hamburger icon animation */
+.layers {
+  transition: all 0.3s;
+  height: 2px;
+  width: 50%;
+  background-color: #161616;
+}
+
+.horizontal {
+  transition: all 0.3s;
+  margin-top: 4px;
+}
+
+.diagonal.part-1 {
+  transition: all 0.3s;
+}
+
+.diagonal.part-2 {
+  transition: all 0.3s;
+  margin-top: 4px;
+}
+
+.open.horizontal {
+  opacity: 0;
+}
+
+.open.diagonal.part-1 {
+  transform: rotate(135deg);
+}
+
+.open.diagonal.part-2 {
+  transform: rotate(-135deg);
+  margin-top: -8px;
+}
+
+/* Button hover - Gradient effect */
+.btn-hover-effect {
+  background-image: linear-gradient(to right, #FF3D00 0%, #FF6B00 49%, #FF3D00 100%);
+  transition: 0.2s;
+  background-size: 200% auto;
+}
+
+.btn-hover-effect:hover {
+  background-position: right center;
+}
+
+/* Side bar background blur for iOS */
+.ios-backdrop-blur {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
